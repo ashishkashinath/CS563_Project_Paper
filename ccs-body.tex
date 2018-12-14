@@ -1,0 +1,43 @@
+\section{Introduction}
+Cyber-Physical Systems(CPS) consists of an end-to-end architecture of computation, communication and control. These systems, which are typically computationally resource-constrained are deployed in processes which affect everyone of us such as industrial plants for treatment of water, nuclear power plants, surgical robots, unmanned aerial vehicles(UAVs) and so on. These systems involve an interaction between sensors, actuators, controllers and compute elements.
+
+This mix of compute components such as CPUs, Memory and Registers as well control components enable the platform to interface with the environment by using sensors and actuators. The sensors sense the information from the environment, the controller uses this input to calculate the \textit{control output} which is sent to the actuators that are usually motors. In practice, the sensors and actuators could be separated from one another and connected by networks as in the case of industrial plants. However, in case of UAVs, the sensors and actuators can be physically connected via an interconnect such as the Serial bus or I2C.
+
+Furthermore, in practice, we have multiple of these control systems working in unison, each exchanging information over network. Typically, these systems are also connected to the internet to permit online status monitoring and diagnosis for instance. From a security point of view, CPS systems therefore, deal with every issue that an off-the-shelf networked computing device does. Mitigating attacks in the cyber realm requires every fix that goes into a typical networked computing device. In addition, the attack surface of a CPS system is made larger due to the attacks possible on the controls environment of the Cyber-Physical system. These attacks are the focus of this paper, specifically the attacks on the sensors and actuators. Moreover, the controls attacks on networked CPS system can be classified into two categories:
+
+\begin{itemize}
+    \item \textit{Attacks on sensors}: Sensors are subsystems that perceive the environment as well as the progress of the critical parameters of the mission and formulate the state of the CPS. The sensors can be compromised by means of attacking the sensing mechanism itself or by compromising the communication between the sensor and the controller.
+    
+    \item \textit{Attacks on actuators}: Attacks on actuators cause \textit{immediate physical impact} on the device by means of physical instability that can lead to a crashed drone or \textit{take down}. Similar to the attack on sensors, the attacks on actuators can be carried out by attacking the sensing mechanism itself or the control signals between the controller and the actuators.
+    
+\end{itemize}
+
+In this paper, we would be focusing on the attacks on sensors for ease of exposition. The main contributions of this paper are:
+
+\begin{itemize}
+    \item Control Theoretic Framework: We analyze the best control theoretic framework to model the vehicles and look at what is the best way to frame the attacker threat model and the implications of the model.
+    \item Formulating the control theoretic attacks that are possible on UAVs and RVs. We study the impact of sensor and actuator attacks on the control theoretic model here.
+    \item 
+\end{itemize}
+
+Furthermore, it does not matter for us whether the sensing mechanism is attacked or whether the communcation link is affected since we are focused on augmenting the control program(such as SLAM) running in the controller. In particular, this paper zeroes in on control-theoretic security to UAVs and Robotic Vehicles(RVs).
+
+
+\input{relwork}
+\input{background}
+\input{experiments}
+
+\section{Conclusions}
+
+
+\appendix
+
+%\section{Location}
+
+%Note that in the new ACM style, the Appendices come before the References.
+
+%\input{relwork}
+
+%\begin{acks}
+% TODO: For the submission, don't include acknowledgments since they would most likely deanonymize you.
+%\end{acks}
