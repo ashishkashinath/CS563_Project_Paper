@@ -20,15 +20,17 @@ In this paper, we would be focusing on the attacks on sensors for ease of exposi
     \item \textit{Deriving a Control-based invariant for attack detection}
 \end{itemize}
 
-Furthermore, it does not matter for us whether the sensing mechanism is attacked or whether the communcation link is affected since we are focused on augmenting the control program(such as SLAM) running in the controller. In particular, this paper zeroes in on control-theoretic security to UAVs and Robotic Vehicles(RVs).
+Furthermore, it does not matter for us whether the sensing mechanism is attacked or whether the communcation link is affected since we are focused on augmenting the control program (such as SLAM) running in the controller. In particular, this paper zeroes in on control-theoretic security framework applicable to UAVs.
 
 
 \input{relwork}
 \input{background}
-\input{experiments}
+\input{security_challenge}
+\input{solution}
+\input{evaluation}
 
 \section{Conclusions}
-
+The goal of this paper is to come up with problem formulation and a framework for detecting physical attacks on CPS systems. A UAV platform is taken as an example and a control invariant approach is developed to monitor the behavior of the platform. This is analogous to the program execution invariant that is developed in the cyber realm to protect against code injection and control flow hijacking attacks. The paper also provides an outline of evaluation on a custom-made UAV platform as well as a simulator.
 
 \appendix
 
